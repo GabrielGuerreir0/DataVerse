@@ -1,21 +1,105 @@
-.Funcionalidades-container{
-    background-color: #131223;
-}
-.area-interativa{
-    background-color: #131223;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.box{
-    
-    border-radius: 5px;
-    background: linear-gradient(to bottom,pink , transparent);
-    margin-left: 20px;
-    margin-right: 191vh;
-    padding: 1vh 1vh 1vh 1vh;
-}
-.box.img{
-    height: auto;
-    width: 12vh;
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
 
+/* Define o estilo para o container principal das funcionalidades */
+.Funcionalidades-container {
+    text-align: center;
+    background-color: #131223;
+    padding-bottom: 20px;
+}
+
+/* Define o estilo para a caixa do título das funcionalidades */
+.title-box {
+    background-image: linear-gradient(to bottom, #7B2CBF, transparent);
+    color: #fff;
+    padding: 1px; /* Reduzindo o preenchimento */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
+    margin-bottom: 25px;
+    max-width: 50%; /* Reduzindo a largura máxima */
+    margin-left: auto;
+    margin-right: auto;
+}
+.tit{
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* Define o estilo para o container que envolve as opções */
+.options-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; /* Adiciona um espaçamento nas laterais */
+}
+
+/* Define o estilo para a linha de opções */
+.option-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a linha abaixo */
+}
+
+/* Define o estilo para cada box de opção */
+.option-box {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #901CAF 0%, transparent 100%);
+    flex: 1 0 calc(25% - 20px); /* Divide igualmente em quatro colunas para desktop */
+    max-width: calc(25% - 20px); /* Divide igualmente em quatro colunas para desktop */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Define o estilo para a imagem dentro de cada box de opção */
+.option-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Define o estilo para o texto dentro de cada box de opção */
+.option-box p {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom, #901CAF 0%, #35D2DB 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Define o estilo ao passar o mouse sobre cada box de opção */
+.option-box:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(to bottom, transparent 0%, #901CAF 100%);
+}
+
+/* Define o estilo ao passar o mouse sobre o texto dentro de cada box de opção */
+.option-box:hover p {
+    background-image: none;
+    background-image: linear-gradient(to bottom, #35D2DB 60%, transparent);
+}
+
+/* Media queries para telas maiores */
+@media (max-width: 1200px) {
+    .option-box {
+        flex: 1 0 calc(33.333% - 20px); /* Divide igualmente em três colunas para telas maiores */
+        max-width: calc(33.333% - 20px); /* Divide igualmente em três colunas para telas maiores */
+    }
+}
+
+/* Media queries para tablets */
+@media (max-width: 768px) {
+    .option-box {
+        flex: 1 0 calc(50% - 20px); /* Divide igualmente em duas colunas para tablets */
+        max-width: calc(50% - 20px); /* Divide igualmente em duas colunas para tablets */
+    }
 }

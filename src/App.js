@@ -9,7 +9,8 @@ import carousel from './components/carousel';
 function App() {
   return (
     <div class="site">
-      <div><Footer/></div>
+      
+      <div><carousel/></div>
       
       
       
