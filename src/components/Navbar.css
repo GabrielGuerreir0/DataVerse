@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+
+/* Reseta as margens e define a caixa de modelo como border-box */
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Define o tamanho da fonte base para 62.5% do tamanho padrão (facilita a conversão de rem para pixels) */
+html {
+  font-size: 62.5%;
+  
+}
+/* Define o tamanho da fonte do corpo do documento como 1.6 rem (equivalente a 16px) */
+body {
+  font-size: 1.6rem;
+}
+/* Remove os bullets padrão de listas */
+li {
+  list-style: none;
+}
+/* Estilos para a classe 'marca' */
+.marca {
+  display: flex;
+  align-items: center;
+}
+/* Estilos para a imagem dentro da classe 'marca' */
+.marca-image {
+  max-width: 60px;
+  height: auto;
+  margin-right: 5px;
+}
+
+/* Estilos para links */
+a {
+  text-decoration: none;
+  color: #7B2CBF;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+/* Estilos para a barra de navegação */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8.8vh;
+  background: #0D0D1A;
+}
+/* Estilos para o texto da marca na barra de navegação */
+.nav__brand {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* Estilos para o menu de navegação */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10rem;
+}
+/* Estilos para o ícone de menu 'hamburguer' */
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #7B2CBF;
+  transition: 0.4s ease-in;
+}
+/* Define o cursor como ponteiro e oculta inicialmente o elemento com a classe 'nav__toggler' */
+.nav__toggler {
+  cursor: pointer;
+  display: none;
+}
+/* Estilos para o ícone de menu 'hamburguer' (aplicado em telas menores) */
+@media screen and (max-width: 768px) {
+  /* Exibe o ícone de menu 'hamburguer' */
+  .nav__toggler {
+    display: block;
+  }
+/* Estilos para o menu de navegação em telas menores */
+  .nav__menu {
+    position: fixed;
+    top: 6.5vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    background: linear-gradient(to bottom, #0D0D1A,#202039);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+/* Ativa o menu de navegação em telas menores */
+  .nav__active {
+    transform: translateX(0);
+  }
+/* Estilos para as linhas do ícone 'hamburguer' quando ativado */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}

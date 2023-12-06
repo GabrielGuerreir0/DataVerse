@@ -1,0 +1,150 @@
+/* Importa a fonte Pixelify Sans com peso 700 */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+
+/* Estilos para o footer */
+.footer {
+  background-color: #0D0D19; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  padding: 20px 0; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+}
+
+/* Estilos para o conteúdo do footer */
+.footer-content {
+  display: flex; /* Define o conteúdo como flex container */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  flex-wrap: wrap; /* Permite que os elementos sejam quebrados em linhas */
+}
+
+/* Estilos para o container do logo */
+.logo-container {
+  display: flex; /* Define o conteúdo como flex container */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  margin-left: 150px; /* Margem esquerda */
+}
+
+/* Estilos para o logo */
+.logo {
+  max-width: 50px; /* Largura máxima do logo */
+  height: auto; /* Altura automática para manter a proporção */
+  margin-right: px; /* Margem direita (corrigir valor) */
+}
+
+/* Estilos para o texto dentro do container do logo */
+.logo-container p {
+  margin: 0; /* Remove margens */
+  color: #7B2CBF; /* Cor do texto */
+  font-family: 'Pixelify Sans', sans-serif; /* Fonte do texto */
+}
+
+/* Estilos para o container dos ícones */
+.icons-container {
+  display: flex; /* Define o conteúdo como flex container */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+/* Estilos para a lista de ícones */
+.icons-container nav ul {
+  padding: 0; /* Remove o espaçamento interno */
+  list-style: none; /* Remove a estilização da lista */
+  display: flex; /* Define a lista como flex container */
+}
+
+/* Estilos para cada item da lista de ícones */
+.icons-container nav ul li {
+  display: inline; /* Exibe os itens em linha */
+  margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilos para os links dos ícones */
+.icons-container nav ul li a {
+  color: #fff; /* Cor do texto */
+  text-decoration: none; /* Remove a decoração do link */
+}
+
+/* Estilos para os ícones */
+.icon {
+  max-width: 20px; /* Largura máxima do ícone */
+  height: auto; /* Altura automática para manter a proporção */
+}
+
+/* Estilos para a linha separadora */
+.separator {
+  width: 100%; /* Largura total */
+  margin: 10px 0; /* Espaçamento ao redor */
+  border: 0; /* Remove a borda padrão */
+  border-top: 1px solid #7B2CBF; /* Estilo da linha */
+  margin-left: 100px; /* Margem esquerda */
+  margin-right: 90px; /* Margem direita */
+}
+
+/* Estilos para o container do e-mail */
+.mail-container {
+  display: flex; /* Define o conteúdo como flex container */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  color: #fff; /* Cor do texto */
+  margin-left: 150px; /* Margem esquerda */
+}
+
+/* Estilos para o link do e-mail */
+.mail-container a {
+  display: flex; /* Define o conteúdo como flex container */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  text-decoration: none; /* Remove a decoração do link */
+  color: #fff; /* Cor do texto */
+  margin-left: 5px; /* Espaçamento entre o ícone e o texto */
+  font-family: none; /* Remove a família de fontes */
+}
+
+/* Estilos para a imagem do e-mail */
+.mail-container img {
+  max-width: 20px; /* Largura máxima da imagem */
+  margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilos para o link do e-mail quando passa o mouse */
+.mail-container a:hover {
+  color: #7B2CBF; /* Cor do texto ao passar o mouse */
+  cursor: pointer; /* Altera o cursor ao passar o mouse */
+}
+
+/* Estilos para o parágrafo dos direitos autorais */
+.direitos {
+  text-align: right; /* Alinha o texto à direita */
+  color: #fff; /* Cor do texto */
+  margin-top: 10px; /* Espaçamento superior */
+  margin-right: 150px; /* Margem direita */
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media screen and (max-width: 768px) {
+  /* Estilos para telas menores ou iguais a 768px */
+  .footer-content {
+    flex-direction: column; /* Altera a direção do conteúdo para empilhado */
+    text-align: center; /* Alinha o conteúdo ao centro */
+  }
+
+  /* Remove as margens para os contêineres */
+  .logo-container,
+  .icons-container,
+  .mail-container {
+    margin-left: 0; /* Remove a margem esquerda */
+  }
+
+  /* Alinha os direitos ao centro e remove a margem direita */
+  .direitos {
+    text-align: center; /* Alinha os direitos ao centro */
+    margin-right: 0; /* Remove a margem direita */
+  }
+}
+
+/* Estilos para dispositivos móveis com largura máxima de 480px */
+@media screen and (max-width: 480px) {
+  /* Remove as margens para a linha separadora */
+  .separator {
+    margin-left: 0; /* Remove a margem esquerda */
+    margin-right: 0; /* Remove a margem direita */
+  }
+}

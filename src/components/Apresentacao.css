@@ -1,0 +1,120 @@
+/* Importa a fonte Pixelify Sans com peso 700 */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+
+/* Estilos para o container de apresentação */
+.Apresentacao-container {
+  color: #fcfcfc; /* Cor do texto */
+  margin: 0; /* Remove margens */
+  background-color: black; /* Cor de fundo */
+  background-image: linear-gradient(to bottom, #131223, transparent, #300453); /* Gradiente de fundo */
+  background-size: 10vh; /* Tamanho do plano de fundo */
+  padding: 20px; /* Espaçamento interno geral */
+  display: flex; /* Define o conteúdo como flex container */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha os itens ao centro horizontalmente */
+  text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilos para o texto de apresentação */
+#apresentaca-text {
+  text-align: center; /* Alinha o texto ao centro */
+  margin-top: 3%; /* Espaçamento superior */
+}
+
+/* Estilos para o título */
+.title {
+  font-family: 'Pixelify Sans', sans-serif; /* Fonte do título */
+  color: #7b2cbf; /* Cor do título */
+  padding: 20px 0; /* Espaçamento interno do título */
+  font-size: 4vh; /* Tamanho do título */
+}
+
+/* Estilos para o conteúdo */
+#content {
+  display: flex; /* Define o conteúdo como flex container */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha os itens ao centro horizontalmente */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilos para a imagem de apresentação */
+#image-apresentacao img {
+  max-width: 100%; /* Largura máxima para a imagem */
+  height: auto; /* Altura automática para manter proporção */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilos para o texto */
+.texto {
+  font-size: 16px; /* Tamanho do texto */
+  margin-bottom: 16px; /* Espaçamento inferior do texto */
+}
+
+/* Estilos para o botão "saiba mais" */
+.saiba-mais {
+  border-radius: 5px; /* Borda arredondada */
+  border: none; /* Remove a borda */
+  background-image: linear-gradient(to bottom, #7b2cbf, #31144b); /* Gradiente de fundo do botão */
+  padding: 15px 30px; /* Espaçamento interno */
+  color: #fcfcfc; /* Cor do texto */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Efeito hover para o botão */
+button:hover {
+  background-image: linear-gradient(to bottom, #692b9f, #31144b); /* Gradiente de fundo ao passar o mouse */
+  transition: color 0.3s; /* Transição de cor suave */
+  cursor: pointer; /* Mostra o cursor ao passar o mouse */
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media screen and (min-width: 768px) {
+  /* Estilos para tablets e telas maiores */
+  .Apresentacao-container {
+    flex-direction: row; /* Organiza os itens em linha */
+    justify-content: space-around; /* Distribui os itens ao redor */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+
+  .title {
+    font-size: 3vh; /* Tamanho do título */
+    margin-top: 0; /* Remove espaçamento superior do título */
+  }
+
+  #content {
+    max-width: 50%; /* Largura máxima para o conteúdo */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+
+  #image-apresentacao {
+    max-width: 50%; /* Largura máxima para a imagem */
+    height: auto; /* Altura automática para manter proporção */
+    margin-bottom: 0; /* Remove espaçamento inferior */
+  }
+
+  .texto {
+    font-size: 18px; /* Tamanho do texto */
+  }
+
+  .saiba-mais {
+    margin-top: 0; /* Remove espaçamento superior do botão */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Estilos para desktops maiores */
+  .title {
+    font-size: 5vh; /* Tamanho do título */
+  }
+
+  .texto {
+    font-size: 20px; /* Tamanho do texto */
+  }
+
+  #image-apresentacao {
+    max-width: 100%; /* Largura máxima para a imagem */
+    height: auto; /* Altura automática para manter proporção */
+    margin-bottom: 0; /* Remove espaçamento inferior */
+  }
+}

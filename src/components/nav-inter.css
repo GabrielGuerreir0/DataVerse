@@ -1,0 +1,48 @@
+/* Estilo CSS para a barra de navegação */
+
+/* Reseta as margens e define a modelagem da caixa */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Define o tamanho da fonte base como 10px (62.5% de 16px) para facilitar cálculos */
+html {
+  font-size: 62.5%;
+}
+
+/* Define o tamanho da fonte padrão para o corpo do documento */
+body {
+  font-size: 1.6rem;
+}
+
+/* Estilos para a marca na barra de navegação */
+.marca {
+  display: flex; /* Define o conteúdo como um flex container */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilos para a imagem na marca */
+.marca-image {
+  max-width: 60px; /* Define a largura máxima da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: 10px; /* Adiciona espaço à direita da imagem */
+}
+
+/* Estilos para o texto da marca na barra de navegação */
+.nav__brand {
+  margin: 0; /* Remove margens */
+  text-decoration: none; /* Remove decoração do link */
+  color: #7B2CBF; /* Define a cor do texto */
+  font-family: 'Pixelify Sans', sans-serif; /* Define a família de fontes */
+}
+
+/* Estilos para a barra de navegação */
+.nav {
+  display: flex; /* Define o conteúdo como um flex container */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: space-around; /* Distribui os itens igualmente ao longo do eixo principal */
+  height: 8.8vh; /* Define a altura da barra de navegação */
+  background: #0D0D1A; /* Define a cor de fundo da barra de navegação */
+}

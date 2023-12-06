@@ -1,0 +1,21 @@
+.Funcionalidades-container{
+    background-color: #131223;
+}
+.area-interativa{
+    background-color: #131223;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.box{
+    
+    border-radius: 5px;
+    background: linear-gradient(to bottom,pink , transparent);
+    margin-left: 20px;
+    margin-right: 191vh;
+    padding: 1vh 1vh 1vh 1vh;
+}
+.box.img{
+    height: auto;
+    width: 12vh;
+
+}
