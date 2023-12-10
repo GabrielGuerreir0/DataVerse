@@ -4,7 +4,7 @@ import Nav from './components/Nav-inter';
 import Apresentacao from './components/Apresentacao';
 import Estruturas from './components/Estruturas';
 import Footer from'./components/Footer';
-import Carousel from './components/Carousel';
+import Carousel from './components/carousel';
 
 function App() {
   return (
