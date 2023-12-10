@@ -8,7 +8,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 // Importa o arquivo Carousel.css que contém estilos adicionais
-import './Carousel.css';
+import './carousel.css';
 
 // Importa os módulos EffectCoverflow e Pagination de 'swiper/modules'
 import { EffectCoverflow, Pagination } from 'swiper/modules';
