@@ -1,5 +1,5 @@
 import React from 'react';
-import './nav-inter.css'; // Importa o estilo CSS para a barra de navegação
+import './Nav-inter.css'; // Importa o estilo CSS para a barra de navegação
 import logo from './imgs/logo_site.png'; // Importa a imagem do logo do site
 
 function Navbar() {

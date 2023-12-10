@@ -1,33 +1,131 @@
-#App { height: 100% }
+/* Importa a fonte 'Pixelify Sans' com peso 700 para uso no documento */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+
+/* Estiliza o elemento com ID 'app' para ocupar 100% da altura */
+#app {
+  height: 100%;
+}
+
+/* Define a posição relativa para os elementos HTML e body */
 html,
 body {
   position: relative;
   height: 100%;
 }
 
+/* Estiliza o corpo da página */
 body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
+  /* Aplica um gradiente de cores ao fundo */
+  background: linear-gradient(to bottom, #3C096C, #10002B);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /* Define a família de fontes */
+  font-size: 14px; /* Define o tamanho da fonte */
+  color: #000; /* Define a cor do texto */
+  margin: 0; /* Remove as margens padrão */
+  padding: 0; /* Remove o preenchimento padrão */
 }
 
+/* Estiliza o container do swiper */
 .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
+/* Estiliza os slides do swiper */
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 }
 
+/* Estiliza as imagens dentro dos slides */
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+/* Estiliza o container do slide */
+.slide-container {
+  position: relative;
+  text-align: center;
+}
+
+/* Estiliza a descrição do slide */
+.slide-description {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estiliza a imagem arredondada */
+.rounded-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 5px solid transparent; /* Adiciona uma borda transparente inicialmente */
+  background: linear-gradient(45deg, #7B2CBF, #901CAF); /* Gradiente de cores - ajuste conforme desejado */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out; /* Adiciona uma transição suave para a borda */
+}
+
+/* Estiliza o container do slide */
+.slide-container {
+  position: relative;
+  text-align: center;
+}
+
+/* Estiliza a descrição do slide */
+.slide-description {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #7B2CBF, transparent); /* Ajuste a opacidade conforme desejado */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px; /* Ajuste o raio conforme desejado */
+  font-size: 12px;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: bottom 0.3s ease-in-out;
+  font-family: 'Pixelify Sans', sans-serif; /* Utiliza a fonte 'Pixelify Sans' */
+}
+
+/* Esconde a descrição do slide */
+.hidden {
+  bottom: -50px;
+}
+
+/* Altera a cor da borda ao passar o mouse sobre a imagem arredondada */
+.rounded-image:hover {
+  border-color: #0D0D1A; /* Altera a cor da borda ao passar o mouse - ajuste conforme desejado */
+}
+
+/* Estiliza o título da equipe */
+.team-title {
+  text-align: center;
+  background-image: linear-gradient(to bottom, #7B2CBF, transparent);
+  color: #fff;
+  padding: 1px; /* Reduzindo o preenchimento */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 35px;
+  margin-bottom: 25px;
+  max-width: 50%; /* Reduzindo a largura máxima */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Pixelify Sans', sans-serif; /* Utiliza a fonte 'Pixelify Sans' */
 }

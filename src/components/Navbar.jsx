@@ -25,9 +25,9 @@ function Navbar() {
       {/* Lista de itens do menu */}
       <ul className={active}>
         <li className="nav__item"><a href="#" className="nav__link">Sobre</a></li>
-        <li className="nav__item"><a href="#" className="nav__link">Developers</a></li>
-        <li className="nav__item"><a href="#" className="nav__link">Estruturas</a></li>
-        <li className="nav__item"><a href="#" className="nav__link">Contato</a></li>
+        <li className="nav__item"><a href="#equipe" className="nav__link">Developers</a></li>
+        <li className="nav__item"><a href="#estruturas" className="nav__link">Estruturas</a></li>
+        <li className="nav__item"><a href="#rodape" className="nav__link">Contato</a></li>
       </ul>
       {/* Ícone do menu toggle */}
       <div onClick={navToggler} className={toggleIcon}>

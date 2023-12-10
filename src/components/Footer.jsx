@@ -8,7 +8,7 @@ import mail from './imgs/carta.png'; // Importa a imagem do ícone do e-mail
 
 const Footer = () => {
   return (
-    <footer className="footer"> {/* Cria o componente do footer */}
+    <footer className="footer" id="rodape"> {/* Cria o componente do footer */}
       <div className="footer-content"> {/* Conteúdo do footer */}
         <div className="logo-container"> {/* Container para o logo */}
           <img className="logo" src={logo} alt="Logo" /> {/* Exibe o logo do site */}

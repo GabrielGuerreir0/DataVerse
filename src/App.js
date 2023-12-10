@@ -1,16 +1,21 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Nav from './components/nav-inter';
+import Nav from './components/Nav-inter';
 import Apresentacao from './components/Apresentacao';
 import Estruturas from './components/Estruturas';
 import Footer from'./components/Footer';
-import carousel from './components/carousel';
+import Carousel from './components/Carousel';
 
 function App() {
   return (
     <div class="site">
+      <div><Navbar/></div>
+      <div><Apresentacao/></div>
+      <div><Estruturas/></div>
+      <div><Carousel/></div>
+      <div><Footer/></div>
       
-      <div><carousel/></div>
+
       
       
       

@@ -58,6 +58,7 @@
   padding: 15px 30px; /* Espaçamento interno */
   color: #fcfcfc; /* Cor do texto */
   margin-top: 20px; /* Espaçamento superior */
+  font-family:'Pixelify Sans', sans-serif;/*Fonte do texto do botão*/
 }
 
 /* Efeito hover para o botão */

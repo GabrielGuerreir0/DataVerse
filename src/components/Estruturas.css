@@ -70,6 +70,7 @@
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
     background-image: linear-gradient(to bottom, #901CAF 0%, #35D2DB 100%);
     background-clip: text;
     -webkit-background-clip: text;

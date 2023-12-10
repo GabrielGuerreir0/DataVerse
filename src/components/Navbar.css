@@ -48,6 +48,7 @@ a {
 .nav__brand {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 18px;
 }
 /* Estilos para o menu de navegação */
 .nav__menu {
@@ -55,6 +56,12 @@ a {
   align-items: center;
   justify-content: space-around;
   gap: 10rem;
+  font-size: 15px;
+}
+/*hover do menu de navegação*/
+.nav__menu :hover{
+  color: white;
+  transition: 0.4s;
 }
 /* Estilos para o ícone de menu 'hamburguer' */
 .nav__toggler div {
