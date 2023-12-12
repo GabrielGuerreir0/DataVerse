@@ -13,6 +13,7 @@ import vetor from './imgs/vetores.png';
 import diagrama from './imgs/diagrama.png';
 import grafo from './imgs/conectividade.png';
 import lista from './imgs/lista-de-afazeres.png';
+import { Link } from "react-router-dom";
 
 // Componente Funcionalidad que renderiza as estruturas de dados
 const Funcionalidad = () => {
@@ -31,33 +32,33 @@ const Funcionalidad = () => {
                 <div className="option-row">
                     {/* Opção de Pilha */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to="/Pilha">
                             <img src={pilha} alt="Pilha" />
-                        </a>
+                        </Link>
                         <p>Pilha</p>
                     </div>
 
                     {/* Opção de Árvore */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to="/Arvore">
                             <img src={arvore} alt="Árvore" />
-                        </a>
+                        </Link>
                         <p>Árvore</p>
                     </div>
 
                     {/* Opção de Tabela Hash */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to='/HashTable'>
                             <img src={hash_table} alt="Tabela Hash" />
-                        </a>
+                        </Link>
                         <p>Tabela Hash</p>
                     </div>
 
                     {/* Opção de Fila */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to="/Fila">
                             <img src={fila} alt="Fila" />
-                        </a>
+                        </Link>
                         <p>Fila</p>
                     </div>
                 </div>
@@ -66,33 +67,33 @@ const Funcionalidad = () => {
                 <div className="option-row">
                     {/* Opção de Vetor */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to="/Vetores">
                             <img src={vetor} alt="Vetor" />
-                        </a>
+                        </Link>
                         <p>Vetor</p>
                     </div>
 
                     {/* Opção de Diagrama */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to="/Heaps">
                             <img src={diagrama} alt="Diagrama" />
-                        </a>
+                        </Link>
                         <p>Heaps</p>
                     </div>
 
                     {/* Opção de Grafo */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to="/Grafo">
                             <img src={grafo} alt="Grafo" />
-                        </a>
+                        </Link>
                         <p>Grafo</p>
                     </div>
 
                     {/* Opção de Lista */}
                     <div className="option-box">
-                        <a href="#">
+                        <Link to="/Lista">
                             <img src={lista} alt="Lista de Afazeres" />
-                        </a>
+                        </Link>
                         <p>Lista</p>
                     </div>
                 </div>

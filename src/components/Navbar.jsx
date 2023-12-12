@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Importa o estilo CSS para a barra de navegação
 import logo from './imgs/logo_site.png'; // Importa o logotipo do site
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   // Estados para controlar a classe ativa do menu e a classe do ícone do menu toggle
@@ -21,11 +22,11 @@ function Navbar() {
          <img src={logo} className='marca-image' alt="Logo do site"/>
       </div>
       {/* Nome da marca */}
-      <a href='#' className='nav__brand'>DataVerse</a>
+      <Link to='/' className='nav__brand'>DataVerse</Link>
       {/* Lista de itens do menu */}
       <ul className={active}>
-        <li className="nav__item"><a href="#" className="nav__link">Sobre</a></li>
-        <li className="nav__item"><a href="#equipe" className="nav__link">Developers</a></li>
+        <li className="nav__item"><Link to='/Sobre' className="nav__link">Sobre</Link></li>
+        <li className="nav__item"><Link to='/#equipe' className="nav__link">Developers</Link></li>
         <li className="nav__item"><a href="#estruturas" className="nav__link">Estruturas</a></li>
         <li className="nav__item"><a href="#rodape" className="nav__link">Contato</a></li>
       </ul>
