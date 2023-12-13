@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Pixelify+Sans:wght@700&family=Silkscreen&display=swap');
 
 .TextApresentacao {
     display: flex;
@@ -26,7 +27,7 @@
     margin-left: 10%;
     margin-right: 10%;
     line-height: 2;
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Nova Square', sans-serif;
   }
   .text{
     margin-top: 30px;

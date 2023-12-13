@@ -4,7 +4,8 @@
 .Funcionalidades-container {
     text-align: center;
     background-color: #131223;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 /* Define o estilo para a caixa do título das funcionalidades */

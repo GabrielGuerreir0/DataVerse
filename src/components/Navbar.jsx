@@ -16,7 +16,7 @@ function Navbar() {
 
   // Retorna a estrutura da barra de navegação com o logotipo, itens de menu e ícone do menu toggle
   return (
-    <nav className='nav'>
+      <nav className='nav'>
       {/* Logotipo */}
       <div className="marca">
          <img src={logo} className='marca-image' alt="Logo do site"/>
@@ -26,9 +26,9 @@ function Navbar() {
       {/* Lista de itens do menu */}
       <ul className={active}>
         <li className="nav__item"><Link to='/Sobre' className="nav__link">Sobre</Link></li>
-        <li className="nav__item"><Link to='/#equipe' className="nav__link">Developers</Link></li>
-        <li className="nav__item"><a href="#estruturas" className="nav__link">Estruturas</a></li>
-        <li className="nav__item"><a href="#rodape" className="nav__link">Contato</a></li>
+        <li className="nav__item"><a href='/#equipe' className="nav__link">Developers</a></li>
+        <li className="nav__item"><a href="/#estruturas" className="nav__link">Estruturas</a></li>
+        <li className="nav__item"><a href="/#rodape" className="nav__link">Contato</a></li>
       </ul>
       {/* Ícone do menu toggle */}
       <div onClick={navToggler} className={toggleIcon}>
@@ -37,6 +37,7 @@ function Navbar() {
         <div className="line3"></div>
       </div>
     </nav>
+    
   );
 };
 

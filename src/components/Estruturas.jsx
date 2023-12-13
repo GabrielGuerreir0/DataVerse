@@ -32,7 +32,7 @@ const Funcionalidad = () => {
                 <div className="option-row">
                     {/* Opção de Pilha */}
                     <div className="option-box">
-                        <Link to="/Pilha">
+                        <Link to="/Pilha#inicio">
                             <img src={pilha} alt="Pilha" />
                         </Link>
                         <p>Pilha</p>
@@ -40,7 +40,7 @@ const Funcionalidad = () => {
 
                     {/* Opção de Árvore */}
                     <div className="option-box">
-                        <Link to="/Arvore">
+                        <Link to="/Arvore#inicio">
                             <img src={arvore} alt="Árvore" />
                         </Link>
                         <p>Árvore</p>
@@ -48,7 +48,7 @@ const Funcionalidad = () => {
 
                     {/* Opção de Tabela Hash */}
                     <div className="option-box">
-                        <Link to='/HashTable'>
+                        <Link to='/HashTable#inicio'>
                             <img src={hash_table} alt="Tabela Hash" />
                         </Link>
                         <p>Tabela Hash</p>
@@ -56,7 +56,7 @@ const Funcionalidad = () => {
 
                     {/* Opção de Fila */}
                     <div className="option-box">
-                        <Link to="/Fila">
+                        <Link to="/Fila#inicio">
                             <img src={fila} alt="Fila" />
                         </Link>
                         <p>Fila</p>
@@ -67,7 +67,7 @@ const Funcionalidad = () => {
                 <div className="option-row">
                     {/* Opção de Vetor */}
                     <div className="option-box">
-                        <Link to="/Vetores">
+                        <Link to="/Vetores#inicio">
                             <img src={vetor} alt="Vetor" />
                         </Link>
                         <p>Vetor</p>
@@ -75,7 +75,7 @@ const Funcionalidad = () => {
 
                     {/* Opção de Diagrama */}
                     <div className="option-box">
-                        <Link to="/Heaps">
+                        <Link to="/Heaps#inicio">
                             <img src={diagrama} alt="Diagrama" />
                         </Link>
                         <p>Heaps</p>
@@ -83,7 +83,7 @@ const Funcionalidad = () => {
 
                     {/* Opção de Grafo */}
                     <div className="option-box">
-                        <Link to="/Grafo">
+                        <Link to="/Grafo#inicio">
                             <img src={grafo} alt="Grafo" />
                         </Link>
                         <p>Grafo</p>
@@ -91,7 +91,7 @@ const Funcionalidad = () => {
 
                     {/* Opção de Lista */}
                     <div className="option-box">
-                        <Link to="/Lista">
+                        <Link to="/Lista#inicio">
                             <img src={lista} alt="Lista de Afazeres" />
                         </Link>
                         <p>Lista</p>
