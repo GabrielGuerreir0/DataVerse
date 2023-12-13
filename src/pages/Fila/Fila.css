@@ -1,0 +1,86 @@
+.fila-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .fila {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .fila-item {
+    background-color: #6a5acd;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .caixaDeTexto  {
+    border: 8px solid #0D0D1A ;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 525px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #311c3c ;
+    flex-direction: column;
+    animation: fadeAnimation 0.5s ease-in-out;
+    overflow-y: scroll; /* Alteração aqui: sempre mostrar a barra de rolagem */
+    max-height: 550px; /* Altura máxima da caixa de texto */
+    scrollbar-color: #9317B5 #000000; /* Cor da barra e do track (funciona no Firefox) */
+    scrollbar-width: thin; /* Largura da barra (funciona no Firefox) */
+    }
+    
+    .caixaDeTexto::-webkit-scrollbar {
+    width: 10px;
+    }
+    .caixaDeTexto::-webkit-scrollbar-thumb {
+    background-color: #9317B5; /* Cor da barra no WebKit */
+    border-radius: 5px;
+    }
+    
+    .caixaDeTexto::-webkit-scrollbar-track {
+    background-color: #241d29; /* Cor do track no WebKit */
+    }
+    .titulo_fila{
+     font-family: 'Pixelify Sans', sans-serif;
+     margin-left: 10%;
+     font-size:  30px;
+     color: #8900FF;
+     margin-top: 50px;
+     padding-bottom: 0px;
+    }
+    .explicacao{
+        color: white;
+        font-size: 20px;
+        margin-left: 9%;
+        margin-right: 9%;
+        margin-bottom: 50px;
+        line-height: 1;
+        font-family: 'Nova Square', sans-serif;
+        
+    }
+    .explicacao p{
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .page{
+        background: linear-gradient(to bottom, #131223,#300453);
+    }
