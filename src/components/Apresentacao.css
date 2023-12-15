@@ -48,6 +48,7 @@
 .texto {
   font-size: 16px; /* Tamanho do texto */
   margin-bottom: 16px; /* Espaçamento inferior do texto */
+  font-family: 'Nova Square', sans-serif;
 }
 
 /* Estilos para o botão "saiba mais" */

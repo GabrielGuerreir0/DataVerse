@@ -1,0 +1,105 @@
+.tree {
+    font-family: DejaVu Sans Mono, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% da altura da viewport */
+    margin: 0;
+  }
+  
+  .node {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #6a5acd;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 1s ease, transform 1s ease; /* Ajuste para 1s */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    width: 100px; /* Ajuste o valor conforme necessário */
+  }
+  
+  .node:hover {
+    background-color: #483d8b;
+  }
+  
+  .value {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .children {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+  
+  .node > .children {
+    background-color: #483d8b;
+    border-radius: 12px;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .caixaDeTexto  {
+    border: 8px solid #0D0D1A ;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 525px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #311c3c ;
+    flex-direction: column;
+    animation: fadeAnimation 0.5s ease-in-out;
+    overflow-y: scroll; /* Alteração aqui: sempre mostrar a barra de rolagem */
+    max-height: 550px; /* Altura máxima da caixa de texto */
+    scrollbar-color: #9317B5 #000000; /* Cor da barra e do track (funciona no Firefox) */
+    scrollbar-width: thin; /* Largura da barra (funciona no Firefox) */
+    }
+    
+    .caixaDeTexto::-webkit-scrollbar {
+    width: 10px;
+    }
+    .caixaDeTexto::-webkit-scrollbar-thumb {
+    background-color: #9317B5; /* Cor da barra no WebKit */
+    border-radius: 5px;
+    }
+    
+    .caixaDeTexto::-webkit-scrollbar-track {
+    background-color: #241d29; /* Cor do track no WebKit */
+    }
+    .titulo_fila{
+     font-family: 'Pixelify Sans', sans-serif;
+     margin-left: 10%;
+     font-size:  30px;
+     color: #8900FF;
+     margin-top: 50px;
+     padding-bottom: 0px;
+    }
+    .explicacao{
+        color: white;
+        font-size: 20px;
+        margin-left: 9%;
+        margin-right: 9%;
+        margin-bottom: 50px;
+        line-height: 1;
+        font-family: 'Nova Square', sans-serif;
+        
+    }
+    .explicacao p{
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .page{
+        background: linear-gradient(to bottom, #131223,#300453);
+    }

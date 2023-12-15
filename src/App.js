@@ -1,28 +1,10 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Nav from './components/Nav-inter';
-import Apresentacao from './components/Apresentacao';
-import Estruturas from './components/Estruturas';
-import Footer from'./components/Footer';
-import Carousel from './components/carousel';
+import AppRoutes from './routes';
+
 
 function App() {
   return (
-    <div class="site">
-      <div><Navbar/></div>
-      <div><Apresentacao/></div>
-      <div><Estruturas/></div>
-      <div><Carousel/></div>
-      <div><Footer/></div>
-      
-
-      
-      
-      
-      
-    </div>
-    
-    
+      <AppRoutes/>
   );
 }
 

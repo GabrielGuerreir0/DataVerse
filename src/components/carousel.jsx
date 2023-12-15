@@ -8,7 +8,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 // Importa o arquivo Carousel.css que contém estilos adicionais
-import './carousel.css';
+import './Carousel.css';
 
 // Importa os módulos EffectCoverflow e Pagination de 'swiper/modules'
 import { EffectCoverflow, Pagination } from 'swiper/modules';
@@ -16,9 +16,10 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 // Declaração do componente App
 export default function App() {
   return (
-    <>
+    <div className='carosel_cont'id='equipe'>
+       <>
       {/* Título da equipe */}
-      <div className="team-title" id="equipe">
+      <div className="team-title" >
         <h2>Nossa Equipe</h2>
       </div>
 
@@ -116,5 +117,7 @@ export default function App() {
         </SwiperSlide>
       </Swiper>
     </>
+    </div>
+   
   );
 }
