@@ -1,0 +1,42 @@
+/* style.css */
+.graph {
+    width: 500px;
+    height: 300px;
+  }
+  
+  .node {
+    fill: #8900FF;
+    stroke: #0D0D1A;
+    stroke-width: 2;
+  }
+  
+  .node.active {
+    fill: #483d8b;
+  }
+  
+  .link {
+    stroke: #6a5acd;
+    stroke-width: 2;
+  }
+  .explicacao{
+    color: white;
+    font-size: 20px;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-bottom: 50px;
+    line-height: 1;
+    font-family: 'Nova Square', sans-serif;
+    
+}
+.explicacao p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.titulo_grafo{
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-left: 10%;
+    font-size:  30px;
+    color: #8900FF;
+    margin-top: 50px;
+    padding-bottom: 0px;
+   }
