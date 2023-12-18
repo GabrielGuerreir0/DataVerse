@@ -1,0 +1,205 @@
+/* Estilos globais para o corpo da página */
+body {
+    background: linear-gradient(180deg, #131223 0%, #300453 100%); /* Gradiente de fundo */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* Sombra na borda da página */
+    scrollbar-color: #9317B5 #ccc; /* Cor da barra e do track (funciona no Firefox) */
+    scrollbar-width: thin;
+  }
+  
+  /* Estilos específicos para o WebKit (Chrome, Safari) */
+  body::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem no WebKit */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #9317B5; /* Cor da barra no WebKit */
+    border-radius: 5px; /* Borda arredondada da barra de rolagem no WebKit */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #ccc; /* Cor do track no WebKit */
+  }
+  
+  /* Definição de uma animação de fade */
+  @keyframes fadeAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos específicos para a pilha dentro da caixa de texto */
+  .stack-container {
+    display: flex; /* Exibição como flex container */
+    flex-direction: column; /* Direção da flex container (coluna) */
+    align-items: center; /* Alinhamento central vertical */
+  }
+  
+  /* Estilos para a representação visual da pilha */
+  .stack {
+    display: flex; /* Exibição como flex container */
+    flex-direction: column-reverse; /* Direção da flex container invertida (para empilhamento) */
+  }
+  
+  /* Estilos para cada elemento da pilha */
+  
+    .stack-element {
+      border: 1px solid #9f4ece; /* Borda sólida */
+      border-radius: 4px;
+      height: 23px;
+      margin: 2px; /* Margem entre os elementos da pilha */
+      padding: 5px; /* Preenchimento interno dos elementos da pilha */
+      background-color: #9f4ece; /* Cor de fundo personalizada */
+      color: #fff; /* Cor do texto (pode ser ajustada conforme necessário) */
+    }
+  
+  /* Estilos para a caixa colorida */
+  .info-box {
+    background-color: #9f4ece; /* Cor de fundo desejada */
+    color: #fff; /* Cor do texto */
+    padding: 10px; /* Preenchimento interno */
+    margin: 5px 0; /* Margem superior e inferior */
+    border-radius: 4px; /* Borda arredondada */
+  }
+  
+  /* Estilo para o botão */
+  .botaoPush {
+    align-items: center;
+    margin-left: 30px;
+    background-color: #9317B5;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Estilo para o botão quando hover */
+  .botaoPush:hover {
+    background-color: #000000;
+  }
+  
+  
+  .botaoPop {
+    align-items: center;
+    margin-left: 15px;
+    background-color: #771CAF;;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Estilo para o botão quando hover */
+  .botaoPop:hover {
+    background-color: #000000;
+  }
+  
+  /* Estilos para o contêiner dos botões na parte inferior esquerda */
+  .button-container-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+  /* Estilos para o container das informações da pilha */
+  .info-container {
+    margin-top: 10px; /* Margem superior */
+  }
+  
+  /* Definição da animação de fade (pode ser removida, pois já foi definida globalmente) */
+  @keyframes fadeAnimation {
+    /* Sua animação aqui */
+  }
+  
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+  background-color: #9317B5; /* Cor da barra no WebKit */
+  border-radius: 5px;
+  }
+    
+  body::-webkit-scrollbar-track {
+  background-color: #241d29; /* Cor do track no WebKit */
+  }
+  
+  
+   /* Estilos para a caixa de texto */
+   .caixaDeTexto {
+    border: 8px solid #0D0D1A;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 525px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #311c3c;
+    flex-direction: column;
+    animation: fadeAnimation 0.5s ease-in-out;
+    overflow-y: scroll; /* Sempre mostrar a barra de rolagem */
+    max-height: 550px; /* Altura máxima da caixa de texto */
+    scrollbar-color: #9317B5 #000000; /* Cor da barra e do track (funciona no Firefox) */
+    scrollbar-width: thin; /* Largura da barra (funciona no Firefox) */
+  }
+  
+  /* Estilos para a barra de rolagem no WebKit */
+  .caixaDeTexto::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Estilos para o polegar da barra de rolagem no WebKit */
+  .caixaDeTexto::-webkit-scrollbar-thumb {
+    background-color: #9317B5; /* Cor da barra no WebKit */
+    border-radius: 5px;
+  }
+  
+  /* Estilos para o track da barra de rolagem no WebKit */
+  .caixaDeTexto::-webkit-scrollbar-track {
+    background-color: #241d29; /* Cor do track no WebKit */
+  }
+  
+  /* Estilos para o título do heap */
+  .titulo_pilha {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-left: 10%;
+    font-size: 30px;
+    color: #8900FF;
+    margin-top: 50px;
+    padding-bottom: 0px;
+  }
+  
+  /* Estilos para a explicação do heap */
+  .explicacao {
+    color: white;
+    font-size: 20px;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-bottom: 50px;
+    line-height: 1;
+    font-family: 'Nova Square', sans-serif;
+  }
+  
+  /* Estilos para os parágrafos da explicação */
+  .explicacao p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  
+  /* Estilos para a página */
+  .page {
+    background: linear-gradient(to bottom, #131223, #300453);
+  }
+    

@@ -1,0 +1,179 @@
+/* Estilização CSS para a animação do vetor e outros elementos */
+
+/* Estilização da animação do vetor */
+.vector-animation {
+    text-align: center;
+  }
+  
+  .vector-container {
+    margin-top: 20px;
+  }
+  
+  .vector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .vector-element {
+    width: 40px;
+    height: 40px;
+    background-color: #6a5acd;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+  }
+  
+  .vector-element:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+  }
+  
+  /* Estilização da árvore */
+  .tree {
+    font-family: DejaVu Sans Mono, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% da altura da viewport */
+    margin: 0;
+  }
+  
+  .node {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #6a5acd;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 1s ease, transform 1s ease; /* Ajuste para 1s */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    width: 100px; /* Ajuste o valor conforme necessário */
+  }
+  
+  .node:hover {
+    background-color: #483d8b;
+  }
+  
+  .value {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .children {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+  
+  .node > .children {
+    background-color: #483d8b;
+    border-radius: 12px;
+  }
+  
+  /* Animação de fadeIn */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Estilização da caixa de texto */
+  .caixaDeTexto {
+    border: 8px solid #0d0d1a;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 525px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #311c3c;
+    flex-direction: column;
+    animation: fadeAnimation 0.5s ease-in-out;
+    overflow-y: scroll; /* Sempre mostrar a barra de rolagem */
+    max-height: 550px; /* Altura máxima da caixa de texto */
+    scrollbar-color: #9317b5 #000000; /* Cor da barra e do track (funciona no Firefox) */
+    scrollbar-width: thin; /* Largura da barra (funciona no Firefox) */
+  }
+  
+  .caixaDeTexto::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .caixaDeTexto::-webkit-scrollbar-thumb {
+    background-color: #9317b5; /* Cor da barra no WebKit */
+    border-radius: 5px;
+  }
+  
+  .caixaDeTexto::-webkit-scrollbar-track {
+    background-color: #241d29; /* Cor do track no WebKit */
+  }
+  
+  /* Estilização do título do vetor */
+  .titulo_vetor {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-left: 10%;
+    font-size: 30px;
+    color: #8900ff;
+    margin-top: 50px;
+    padding-bottom: 0px;
+  }
+  
+  /* Estilização da explicação sobre vetores */
+  .explicacao {
+    color: white;
+    font-size: 20px;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-bottom: 50px;
+    line-height: 1;
+    font-family: 'Nova Square', sans-serif;
+  }
+  
+  .explicacao p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  
+  /* Estilização da página */
+  .page {
+    background: linear-gradient(to bottom, #131223, #300453);
+  }
+  
+  /* Estilização dos botões */
+  .button-style {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to top, #9317b5, #8900ff);
+    color: white;
+    transition: background-color 0.3s;
+    margin-bottom: 35px;
+  }
+  
+  .button-style:hover {
+    background-color: #9317b5;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  

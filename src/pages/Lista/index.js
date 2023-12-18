@@ -35,7 +35,6 @@ const Lista = () => {
         </div>
              <div className='caixaDeTexto'>
       <div className="animated-list-container">
-        <h1>Lista Animada</h1>
         <ul className="animated-list">
           {items.map((item) => (
             <li key={item.id} className="list-item">

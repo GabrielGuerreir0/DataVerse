@@ -1,0 +1,121 @@
+/* HeapAnimation.css */
+
+/* Estilos para a container do heap */
+.heap-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Estilos para o heap em si */
+  .heap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para cada nó do heap */
+  .heap-node {
+    width: 40px;
+    background-color: #9317B5;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Estilos para o nó com o maior valor */
+  .heap-node.max-value {
+    background-color: #8900FF; /* Cor diferente para o número de maior valor */
+  }
+  
+  /* Estilos para o nó com o menor valor */
+  .heap-node.min-value {
+    background-color: #7c06e4; /* Cor diferente para o número de maior valor */
+  }
+  
+  /* Estilos para a caixa do próximo elemento */
+  .next-element-box {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px;
+    background-color: #8900FF;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para o valor dentro da caixa do próximo elemento */
+  .value {
+    color: white;
+  }
+  
+  /* Estilos para a caixa de texto */
+  .caixaDeTexto {
+    border: 8px solid #0D0D1A;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 525px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #311c3c;
+    flex-direction: column;
+    animation: fadeAnimation 0.5s ease-in-out;
+    overflow-y: scroll; /* Sempre mostrar a barra de rolagem */
+    max-height: 550px; /* Altura máxima da caixa de texto */
+    scrollbar-color: #9317B5 #000000; /* Cor da barra e do track (funciona no Firefox) */
+    scrollbar-width: thin; /* Largura da barra (funciona no Firefox) */
+  }
+  
+  /* Estilos para a barra de rolagem no WebKit */
+  .caixaDeTexto::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Estilos para o polegar da barra de rolagem no WebKit */
+  .caixaDeTexto::-webkit-scrollbar-thumb {
+    background-color: #9317B5; /* Cor da barra no WebKit */
+    border-radius: 5px;
+  }
+  
+  /* Estilos para o track da barra de rolagem no WebKit */
+  .caixaDeTexto::-webkit-scrollbar-track {
+    background-color: #241d29; /* Cor do track no WebKit */
+  }
+  
+  /* Estilos para o título do heap */
+  .titulo_heap {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-left: 10%;
+    font-size: 30px;
+    color: #8900FF;
+    margin-top: 50px;
+    padding-bottom: 0px;
+  }
+  
+  /* Estilos para a explicação do heap */
+  .explicacao {
+    color: white;
+    font-size: 20px;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-bottom: 50px;
+    line-height: 1;
+    font-family: 'Nova Square', sans-serif;
+  }
+  
+  /* Estilos para os parágrafos da explicação */
+  .explicacao p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  
+  /* Estilos para a página */
+  .page {
+    background: linear-gradient(to bottom, #131223, #300453);
+  }
+  
