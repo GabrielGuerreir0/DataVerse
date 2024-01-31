@@ -17,13 +17,20 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 **Descrição:** Uma sequência de elementos onde cada elemento possui uma referência para o próximo elemento na sequência.
 
 - Funcionalidades Demonstradas:
-    - Inserção
-    - Remoção
-    - Pesquisa
+    - Gerar lista
+    - Gerar lista com valores especificos
+    - Limpar lista
+    - Inserir a cabeça da lista
+    - Inserir em um local especifico da lista
+    - Inserir ao final da lista
+    - Remover da cabeça da lista
+    - Remover do final da lista
+    - Remover de um local especifico da lista
+    - Buscar um valor na lista
 
 ### 2. Pilha
 
-**Descrição:** 
+**Descrição:** Uma sequência de elementos onde cada elemento possui uma referência para o próximo na sequência, seguindo o princípio "último a entrar, primeiro a sair".
 
 - Funcionalidades Demonstradas:
     - 
@@ -32,7 +39,7 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 
 ### 3. Fila
 
-**Descrição:** 
+**Descrição:** Uma fila é uma estrutura de dados onde os elementos são adicionados no final e removidos do início, seguindo a ordem de chegada. É comumente usada para controle de tarefas e recursos, priorizando o processamento dos elementos mais antigos.
 
 - Funcionalidades Demonstradas:
     - 
@@ -41,7 +48,7 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 
 ### 4. Vetor
 
-**Descrição:** 
+**Descrição:** Um vetor é uma estrutura de dados que armazena uma coleção ordenada de elementos do mesmo tipo, ocupando posições consecutivas de memória. Cada elemento é acessado por um índice único, permitindo recuperação eficiente de dados. Os vetores são amplamente utilizados na programação para armazenar e manipular conjuntos de dados, oferecendo acesso aleatório rápido aos elementos.
 
 - Funcionalidades Demonstradas:
     - 
@@ -50,7 +57,7 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 
 ### 5. Heaps
 
-**Descrição:** 
+**Descrição:** Um heap é uma estrutura de dados binária que organiza elementos de acordo com uma relação de prioridade, onde o elemento de maior (ou menor) valor está no topo. Isso permite acesso eficiente ao elemento mais prioritário e é usado em algoritmos de ordenação e otimização.
 
 - Funcionalidades Demonstradas:
     - 
@@ -59,7 +66,7 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 
 ### 6. Hash Table
 
-**Descrição:** 
+**Descrição:** Uma hash table é uma estrutura de dados que mapeia chaves para valores através de uma função de dispersão, permitindo acesso rápido aos valores. Ela é implementada usando um array indexado pelas chaves após a aplicação da função de dispersão, sendo amplamente utilizada para armazenamento eficiente e recuperação rápida de dados.
 
 - Funcionalidades Demonstradas:
     - 
@@ -68,7 +75,7 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 
 ### 7. Árvore
 
-**Descrição:** 
+**Descrição:** Uma árvore é uma estrutura hierárquica na qual cada elemento tem um pai (exceto a raiz) e pode ter vários filhos. É comumente usada para representar relacionamentos hierárquicos em computação.
 
 - Funcionalidades Demonstradas:
     - 
@@ -77,7 +84,7 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 
 ### 8. Grafo
 
-**Descrição:** 
+**Descrição:** Um grafo é uma estrutura de dados composta por vértices conectados por arestas, podendo ser direcionados ou não. É usado para representar uma variedade de problemas computacionais, como redes e relações entre entidades.
 
 - Funcionalidades Demonstradas:
     - 
