@@ -14,13 +14,12 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 
 ### 1. Lista
 
-- Descrição:
- Uma sequência de elementos onde cada elemento possui uma referência para o próximo elemento na sequência.
+**Descrição:** Uma sequência de elementos onde cada elemento possui uma referência para o próximo elemento na sequência.
 
 - Funcionalidades Demonstradas:
- - Inserção
- - Remoção
- - Pesquisa
+    - Inserção
+    - Remoção
+    - Pesquisa
 
 
 ## Como Utilizar
