@@ -21,6 +21,68 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
     - Remoção
     - Pesquisa
 
+### 2. Pilha
+
+**Descrição:** 
+
+- Funcionalidades Demonstradas:
+    - 
+    - 
+    - 
+
+### 3. Fila
+
+**Descrição:** 
+
+- Funcionalidades Demonstradas:
+    - 
+    - 
+    - 
+
+### 4. Vetor
+
+**Descrição:** 
+
+- Funcionalidades Demonstradas:
+    - 
+    - 
+    - 
+
+### 5. Heaps
+
+**Descrição:** 
+
+- Funcionalidades Demonstradas:
+    - 
+    - 
+    - 
+
+### 6. Hash Table
+
+**Descrição:** 
+
+- Funcionalidades Demonstradas:
+    - 
+    - 
+    - 
+
+### 7. Árvore
+
+**Descrição:** 
+
+- Funcionalidades Demonstradas:
+    - 
+    - 
+    - 
+
+### 8. Grafo
+
+**Descrição:** 
+
+- Funcionalidades Demonstradas:
+    - 
+    - 
+    - 
 
 ## Como Utilizar
 Para utilizar nosso site interativo, basta acessar link_para_o_site e navegar pelas diferentes seções para aprender mais sobre as estruturas de dados apresentadas. Cada estrutura terá uma explicação clara de seu funcionamento, juntamente com exemplos interativos para ajudar na compreensão.
