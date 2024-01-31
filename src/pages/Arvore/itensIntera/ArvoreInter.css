@@ -1,0 +1,51 @@
+.Arvoreanimada {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .tree-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .tree-node > div {
+    background-color: #f0f0f0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    user-select: none;
+  }
+  
+  .tree-node > div:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .tree-node > div:first-child {
+    font-weight: bold;
+  }
+  
+  .tree-node > div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .tree-node > div:last-child button {
+    margin-top: 8px;
+  }
+  
+  .tree-node > div:last-child input {
+    margin-bottom: 8px;
+  }
+  
+  /* Animation */
+  .tree-node > div + div {
+    overflow: hidden;
+  }
+  

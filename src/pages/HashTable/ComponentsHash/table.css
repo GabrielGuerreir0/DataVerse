@@ -1,0 +1,16 @@
+.hash-table {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hash-table-item {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 4px;
+    transition: background-color 0.5s;
+  }
+  
+  .hash-table-item.searching {
+    background-color: yellow;
+  }
+  

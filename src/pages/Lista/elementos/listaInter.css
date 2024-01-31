@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+.list {
+    display: block;
+    flex-wrap: wrap;
+  }
+  
+  .list-item {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 4px;
+    transition: background-color 0.5s;
+  }
+  
+  .list-item.searching {
+    background-color: rgb(200, 0, 255);
+  }
+  .menu{
+    border-radius: 5%;
+    background-color: rgb(42, 29, 46);
+    margin-right: 67%;
+    margin-left: 30px;
+  }
+  .menu-section{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .itens-menu{
+    display: block;
+    
+    
+  }
+  #buttom-menu{
+   border-radius: 10%;
+   border: 2px;
+   padding: 10px;
+   margin-left: 30px;
+   margin-bottom: 10px;
+   background-image: linear-gradient(to top, rgb(81, 3, 136),rgb(158, 34, 203));
+   font-family: 'Nova Square', sans-serif;
+   color: white;
+}
+#buttom-menu:hover{
+    background-image: linear-gradient(to top, rgb(81, 3, 136),rgb(43, 3, 57));
+}
+.butaoInteracao{
+    border: 1px;
+    border-radius: 10%;
+    margin-bottom: 5px;
+    background-color: rgb(92, 8, 138);
+    color: white;
+    padding: 7px;
+    font-family: 'Nova Square', sans-serif;
+    margin-right: 5px;
+    margin-left: 2px;
+}

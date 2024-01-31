@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Arvore.css';
 import Navbar from '../../components/Navbar';
 import Footer from'../../components/Footer';
+import Arvoreinte from './itensIntera/arvoreInterativa';
 
 
 const TreeNode = ({ label, children, delay }) => {
@@ -105,6 +106,7 @@ const Arvore = () => {
         </TreeNode>
       )}
     </div></div>
+    <Arvoreinte></Arvoreinte>
     <div><Footer/></div> 
     </div>
   );

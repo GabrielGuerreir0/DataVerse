@@ -2,6 +2,7 @@ import './HashTable.css';
 import Navbar from '../../components/Navbar';
 import Footer from'../../components/Footer';
 import React, { useState, useEffect } from 'react';
+import IntHas from './ComponentsHash/tabela';
 
 
 const HashTableAnimation = () => {
@@ -43,8 +44,10 @@ const HashTableAnimation = () => {
   };
 
   return (
+
     <div className='page'>
         <div><Navbar/></div>
+        <script src="InterTable.js"></script>
         <div className='titulo_hasht' id="inicio"><h2>Hash Table</h2></div>
         
         <div className='explicacao'><p> Uma hash table é uma estrutura de dados que organiza informações usando uma função matemática chamada função hash. Ela mapeia dados para uma localização específica, permitindo o armazenamento e a recuperação eficiente desses dados. Funciona como uma grande prateleira com compartimentos numerados, onde os itens são colocados em compartimentos específicos calculados pela função hash. No entanto, colisões podem ocorrer quando dois itens têm o mesmo local calculado. Para lidar com isso, estratégias como encadeamento (usando listas ligadas) ou hashing com resolução de colisões são utilizadas para garantir que os itens sejam armazenados e acessíveis corretamente.</p><br/>
@@ -57,6 +60,9 @@ const HashTableAnimation = () => {
       <div className="animation-container">{renderTable()}</div>
     </div>
     </div>
+
+
+    <IntHas></IntHas>
     
     <div><Footer/></div>
     </div>

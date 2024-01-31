@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Lista.css';
 import Navbar from '../../components/Navbar';
 import Footer from'../../components/Footer';
+import ListInter from './elementos/listaInterativa';
 
 const Lista = () => {
     const [items, setItems] = useState([{ id: 1, text: 'Produto 1' }]);
@@ -43,7 +44,15 @@ const Lista = () => {
           ))}
         </ul>
       </div>
+      
       </div>
+      <div className='explicacao'><p> Uma lista é uma estrutura de dados que armazena uma coleção ordenada de elementos. É como uma lista de tarefas onde você pode adicionar novos itens, remover ou modificar os existentes e verificar se um item específico está presente. Cada elemento possui uma posição na lista, permitindo acesso direto a eles. A flexibilidade das listas permite manipular informações de maneira sequencial, útil para organizar dados de forma simples e acessível.</p><br/>
+
+        <p>Em termos simples, uma lista é como um registro ordenado de informações, semelhante a uma lista de compras. Ela oferece a capacidade de adicionar, remover e verificar itens, mantendo sua ordem específica. Essa estrutura de dados é valiosa pela sua flexibilidade em lidar com coleções de elementos, facilitando a organização e manipulação de dados de forma sequencial.</p><br/>
+
+        </div>
+      <ListInter></ListInter>
+      
       <div><Footer/></div>
       </div>
        
