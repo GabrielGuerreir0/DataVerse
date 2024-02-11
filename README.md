@@ -87,9 +87,12 @@ As estruturas de dados são formas de organizar e armazenar dados de forma efici
 **Descrição:** Um grafo é uma estrutura de dados composta por vértices conectados por arestas, podendo ser direcionados ou não. É usado para representar uma variedade de problemas computacionais, como redes e relações entre entidades.
 
 - Funcionalidades Demonstradas:
-    - 
-    - 
-    - 
+    - Gerar grafo aleatorio
+    - Gerar grafo especifico
+    - Excluir Grafo
+    - Buscar valor
+    - Inserir valor ao grafo
+    - Excluir valor do grafo
 
 ## Como Utilizar
 Para utilizar nosso site interativo, basta acessar link_para_o_site e navegar pelas diferentes seções para aprender mais sobre as estruturas de dados apresentadas. Cada estrutura terá uma explicação clara de seu funcionamento, juntamente com exemplos interativos para ajudar na compreensão.

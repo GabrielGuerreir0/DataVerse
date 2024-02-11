@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Grafo.css'; 
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
+import Grafointer from './elementos/Grafointer';
 
 const Grafo = () => {
   const [drawnNodes, setDrawnNodes] = useState([]);
@@ -104,6 +105,8 @@ const Grafo = () => {
         </svg>
       </div>
 
+
+            <Grafointer></Grafointer>
       <Footer />
     </div>
   );
