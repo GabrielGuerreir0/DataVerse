@@ -23,30 +23,6 @@ const VectorAnimation = () => {
     return () => clearInterval(interval);
   }, [vector]); // Dispara o efeito quando o vetor é modificado
 
-  // Função para remover o último elemento do vetor
-  const removeElement = () => {
-    if (vector.length > 0) {
-      // Remove o último elemento do vetor
-      const newVector = vector.slice(0, -1);
-      setVector(newVector);
-    }
-  };
-
-  // Função para buscar um elemento no vetor pelo índice
-  const searchElement = () => {
-    const index = prompt('Digite o índice que deseja buscar:');
-    if (index !== null) {
-      const parsedIndex = parseInt(index, 10);
-      if (!isNaN(parsedIndex) && parsedIndex >= 0 && parsedIndex < vector.length) {
-        // Formata o elemento encontrado para exibição
-        const formattedElement = vector[parsedIndex].toString().padStart(3, '0');
-        alert(`Elemento do índice ${parsedIndex}: ${formattedElement}`);
-      } else {
-        alert('Índice inválido ou fora dos limites do vetor.');
-      }
-    }
-  };
-
   // Renderização do componente
   return (
     <div className='page'>
@@ -78,11 +54,6 @@ const VectorAnimation = () => {
               </div>
             </div>
           </div>
-        </div>
-        {/* Botões para remover elemento e buscar elemento por índice */}
-        <div className="buttons-container">
-          <button className="button-style" onClick={removeElement}>Remover Elemento</button>
-          <button className="button-style" onClick={searchElement}>Buscar Elemento por Índice</button>
         </div>
       </div>
       <Footer /> {/* Renderiza o rodapé */}
