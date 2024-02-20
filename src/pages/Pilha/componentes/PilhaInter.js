@@ -9,24 +9,26 @@ const PilhaInter = () => {
     if (stack.length < 10) {
       const valueToAdd = prompt('Digite o valor que deseja adicionar:');
       if (valueToAdd !== null) {
-        setStack(prevStack => [valueToAdd, ...prevStack]); // Adiciona no início da lista (último na pilha)
+        setStack(prevStack => [valueToAdd, ...prevStack]); // Adiciona no início da lista (topo da pilha)
       }
     } else {
       alert('A pilha está cheia!');
     }
   };
-
+  
+  
   const popElement = () => {
     if (stack.length > 0) {
       setStack(prevStack => {
         const updatedStack = [...prevStack];
-        updatedStack.pop();
+        updatedStack.shift(); // Remove o primeiro elemento da lista (topo visualmente)
         return updatedStack;
       });
     } else {
       alert('A pilha está vazia!');
     }
   };
+  
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -55,18 +57,17 @@ const PilhaInter = () => {
 
   return (
     <div>
-      
-        <div className='caixaDeTexto'>
-          <div className='stack-container'>
-            <div className='stack'>
-              {stack.map((element, index) => (
-                <div key={index} className='stack-element'>
-                  {element}
-                </div>
-              ))}
-            </div>
+      <div className='caixaDeTexto'>
+        <div className='stack-container'>
+          <div className='stack'>
+            {stack.slice().reverse().map((element, index) => ( // Inverter a pilha antes de mapear
+              <div key={index} className='stack-element'>
+                {element}
+              </div>
+            ))}
           </div>
         </div>
+      </div>
       <button id='buttom-menu' onClick={toggleMenu}>Acesse o Menu</button>
       {isMenuOpen && (
         <div className="menu">
@@ -79,7 +80,7 @@ const PilhaInter = () => {
                 Remover Valor
               </button>
               <button className='butaoInteracao' onClick={generateRandomList}>
-                Gerar Lista Aleatória
+                Gerar Pilha Aleatória
               </button>
               <button className='butaoInteracao' onClick={searchValueInStack}>
                 Buscar Valor na Pilha
@@ -87,12 +88,12 @@ const PilhaInter = () => {
               <button className='butaoInteracao' onClick={clearStack}>
                 Limpar Pilha
               </button>
-            </div></div>
+            </div>
           </div>
-        )}
-      </div>
-      
-  )
-};
+        </div>
+      )}
+    </div>
+  );
+};  
 
 export default PilhaInter;
