@@ -13,7 +13,7 @@ const Apresentacao = () => {
       </div>
       <div>
         <div id="image-apresentacao"> {/* Div para a imagem de apresentação */}
-          <img src={logomarca} /> {/* Exibe a imagem da logomarca */}
+          <img src={logomarca} atl="logomarca" /> {/* Exibe a imagem da logomarca */}
         </div>
       </div>
     </div>

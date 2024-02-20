@@ -18,16 +18,16 @@ const Footer = () => {
         <div className="icons-container"> {/* Container para os ícones */}
           <nav>
             <ul>
-              <li><a href="#"><img className="icon" src={whatsapp} alt="WhatsApp" /></a></li> {/* Ícone do WhatsApp */}
-              <li><a href="#"><img className="icon" src={github} alt="GitHub" /></a></li> {/* Ícone do GitHub */}
-              <li><a href="#"><img className="icon" src={instagram} alt="Instagram" /></a></li> {/* Ícone do Instagram */}
+              <li><a href="/example.com"><img className="icon" src={whatsapp} alt="WhatsApp" /></a></li> {/* Ícone do WhatsApp */}
+              <li><a href="/example.com"><img className="icon" src={github} alt="GitHub" /></a></li> {/* Ícone do GitHub */}
+              <li><a href="/example.com"><img className="icon" src={instagram} alt="Instagram" /></a></li> {/* Ícone do Instagram */}
             </ul>
           </nav>
           <hr className="separator" /> {/* Linha separadora */}
         </div>
         <hr className="separator" /> {/* Linha separadora */}
         <div className="mail-container"> {/* Container para o e-mail */}
-          <a>
+          <a href="/example.com" >
             <img src={mail} alt="Mail" /> {/* Ícone do e-mail */}
             dataverse4@gmail.com {/* Endereço de e-mail */}
           </a>

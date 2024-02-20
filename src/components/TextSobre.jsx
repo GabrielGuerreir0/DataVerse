@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TextSobre.css';
 import logo from './imgs/logo_site.png';
 
