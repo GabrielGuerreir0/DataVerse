@@ -1,0 +1,48 @@
+.square {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #7e208a;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .hover-indicator {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .container button{
+    border-radius: 5px; /* Borda arredondada */
+    border: none; /* Remove a borda */
+    background-image: linear-gradient(to bottom, #7b2cbf, #31144b); /* Gradiente de fundo do botão */
+    padding: 12px 10px; /* Espaçamento interno */
+    padding-left: 10px;
+    color: #fcfcfc; /* Cor do texto */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 20px;
+    font-family:'Pixelify Sans', sans-serif;/*Fonte do texto do botão*/
+  }
+
+  button:hover {
+    background-image: linear-gradient(to bottom, #692b9f, #31144b); /* Gradiente de fundo ao passar o mouse */
+    transition: color 0.3s; /* Transição de cor suave */
+    cursor: pointer; /* Mostra o cursor ao passar o mouse */
+  }
+
+  .container input{
+    border: 2px solid #7b2cbf;
+    color: black;
+    font-size: 15px;
+    
+  }

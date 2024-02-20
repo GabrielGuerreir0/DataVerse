@@ -84,3 +84,6 @@
     .page{
         background: linear-gradient(to bottom, #131223,#300453);
     }
+    p{
+      line-height: 30px;
+    }

@@ -74,9 +74,27 @@ const Arvore = () => {
 
     <div className='titulo_fila' id="inicio"><h2>Árvore</h2></div>
         
-        <div className='explicacao'><p> Uma árvore de dados é uma estrutura que organiza informações de forma hierárquica, similar aos galhos de uma árvore. Ela começa com um nó central, chamado de "nó raiz", que se ramifica em outros nós, chamados de "nós filhos". Cada nó pode ter seus próprios nós filhos, criando ramos e sub-ramos. Essa estrutura é útil para armazenar e acessar dados de maneira organizada e eficiente, facilitando operações como busca, inserção e exclusão de informações.</p><br/>
-
-        <p>Essas árvores são amplamente utilizadas em computação para resolver diversos problemas, como na criação de bancos de dados, em algoritmos de busca e ordenação, visto que permitem uma busca eficiente e ordenada dos dados, seguindo a estrutura ramificada e hierárquica dos nós.</p><br/>
+        <div className='explicacao'><p> Uma árvore é uma estrutura de dados hierárquica que organiza elementos de forma aninhada, representando relações pai-filho entre os nós. Cada nó possui um valor e pode ter zero ou mais nós filhos, formando uma estrutura arborescente.</p><br/>
+        <h4>Componentes Essenciais da Árvore:</h4><br/>
+        <p> - Raiz: O nó superior da árvore, que não tem pai e serve como ponto de partida.<br/>
+ - Nó: Representa um elemento na árvore, contendo um valor e referências para seus nós filhos.<br/>
+ - Arestas: Conexões entre nós que indicam a relação pai-filho.<br/>
+ - Folhas: Nós sem filhos, localizados nas extremidades da árvore.
+</p><br/>
+<h4>Tipos Comuns de Árvores:</h4><br/>
+<p>Árvore Binária: Cada nó pode ter no máximo dois filhos, um à esquerda e outro à direita.
+Árvore Binária de Busca (BST): Uma árvore binária onde, para cada nó, todos os elementos no subárvore à esquerda são menores e todos os elementos no subárvore à direita são maiores.
+Árvore AVL: Uma árvore binária de busca balanceada para otimizar operações de busca, inserção e remoção.
+</p><br/>
+<h4>Exemplos de Aplicações Práticas:</h4><br/>
+<p> - Sistema de Arquivos: Organização hierárquica de pastas e arquivos em um sistema operacional.<br/>
+ - Expressões Matemáticas: Representação de expressões matemáticas na forma de uma árvore de expressão.<br/>
+ - Árvores Genealógicas: Modelagem de relações familiares em genealogias.
+</p><br/>
+<h4>Operações Específicas para Árvores Binárias:</h4><br/>
+<p> - Altura da Árvore: Número de níveis na árvore, indicando sua profundidade.<br/>
+ - Árvore Cheia: Uma árvore binária onde todos os níveis estão completamente preenchidos, exceto, talvez, o último.
+</p>
 
         </div>
 
@@ -105,8 +123,17 @@ const Arvore = () => {
           )}
         </TreeNode>
       )}
-    </div></div>
+    </div></div><div className='explicacao'>
+      <h4>Operações e Funcionalidades Principais:</h4><br/>
+      <p> - Inserir Nó: Adiciona um novo elemento à árvore, mantendo a estrutura hierárquica.<br/>
+ - Remover Nó: Elimina um nó da árvore, ajustando os nós restantes conforme necessário.<br/>
+ - Buscar Valor: Localiza um valor específico na árvore, permitindo uma busca eficiente.<br/>
+ - Gerar Árvore: Gera uma arvore com valorees aleatorios.
+</p><br/>
+<p>Ao usar essas funcionalidades, as árvores proporcionam uma estrutura eficaz para organizar dados hierarquicamente. Seja para representar relações em estruturas organizacionais, modelar sistemas de arquivos ou otimizar operações de busca, as árvores oferecem flexibilidade e eficiência.</p>
+    </div>
     <Arvoreinte></Arvoreinte>
+    <div className='indicador'> <span class="arrow-up">&#x2191;</span><p>Acesse o menu a cima para realizar as operações interativas</p></div>
     <div><Footer/></div> 
     </div>
   );

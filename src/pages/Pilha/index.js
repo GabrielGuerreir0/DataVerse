@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Pilha.css'; // Importa estilos CSS
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
+import PilhaInter from './componentes/PilhaInter';
 
 const Pilhas = () => {
   // Estado para a pilha
@@ -35,8 +36,15 @@ const Pilhas = () => {
       <Navbar/>   
       <div className='titulo_pilha' id="inicio"><h2>Pilha</h2></div>
       <div className='explicacao'>
-        <p> Uma pilha em estruturas de dados é uma coleção de elementos onde a adição e remoção ocorrem apenas em uma extremidade, chamada de topo da pilha. Funciona como uma pilha de pratos, onde você pode adicionar um novo prato no topo (empilhar) ou remover o prato que está no topo (desempilhar). O último elemento adicionado é o primeiro a ser removido (princípio LIFO - Last In, First Out), proporcionando uma forma de organizar e acessar os dados de maneira sequencial e ordenada.</p><br/>
-        <p>Em termos simples, é como uma pilha de livros onde você adiciona um novo livro no topo e remove apenas o livro que está no topo quando precisa. Isso torna a pilha útil em muitas situações, especialmente quando a ordem de acesso aos dados segue uma lógica de "o último a entrar é o primeiro a sair".</p><br/>
+        <p>Uma pilha é uma estrutura de dados linear que organiza elementos seguindo o princípio "último a entrar, primeiro a sair" (LIFO). Cada elemento, chamado de item, é adicionado ou removido no topo da pilha. A manipulação dos dados ocorre exclusivamente no topo, simplificando o acesso e a remoção de elementos.
+</p><br/>
+<h4>Principais Funcionalidades da Pilha:</h4><br/>
+        <p> - Empilhar (Push): Adiciona um novo elemento ao topo da pilha, tornando-o o item mais recente.<br/>
+ - Desempilhar (Pop): Remove o elemento no topo da pilha, representando o último item adicionado.<br/>
+ - Topo da Pilha: Retorna o elemento no topo da pilha sem removê-lo, permitindo a visualização do item mais recente.<br/>
+ - Verificar se a Pilha Está Vazia: Informa se a pilha não contém elementos, indicando a conclusão de processos.<br/>
+ - Obter Tamanho da Pilha: Retorna o número de elementos na pilha, proporcionando uma visão quantitativa da carga de trabalho.
+</p><br/>
       </div>
       <div>
         {/* Caixa de texto para a pilha */}
@@ -53,6 +61,18 @@ const Pilhas = () => {
           </div>
         </div>
       </div>
+      <div className='explicacao'>
+      <h4>Operações e Funcionalidades Disponíveis:</h4><br/>
+      <p> - Empilhar Elemento: Adiciona um novo item ao topo da pilha, facilitando a inclusão de novos processos ou dados.<br/>
+ - Desempilhar Elemento: Remove o item mais recente da pilha, refletindo o término de uma tarefa ou a conclusão de um processo.<br/>
+ - Buscar um elemento: checa se há um elemento na pilha.<br/>
+ - Gerar pilha aleatoria: Gera uma pilha com valores já introduzidas.<br/>
+ - Apagar pilha: elimina toda a pilha.
+</p><br/>
+<p>Ao utilizar essas funcionalidades, nossa pilha se torna uma ferramenta eficaz para gerenciar processos de forma organizada e eficiente. Seja para reverter a ordem de operações, implementar sistemas de desfazer ou simplesmente para controlar a execução de tarefas, a pilha oferece um conjunto robusto de operações para otimizar o fluxo de trabalho.</p>
+</div>
+      <PilhaInter></PilhaInter>
+      <div className='indicador'> <span class="arrow-up">&#x2191;</span><p>Acesse o menu a cima para realizar as operações interativas</p></div>
       <Footer/>
     </div>
   );

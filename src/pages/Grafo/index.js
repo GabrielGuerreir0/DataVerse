@@ -66,9 +66,27 @@ const Grafo = () => {
       </div>
 
       <div className='explicacao'>
-        <p>Um grafo é uma representação visual de conexões entre objetos, usando vértices (pontos) e arestas (linhas). Essa estrutura de dados é como um mapa, onde os vértices são os locais e as arestas são as estradas que os conectam. Pode ser direcionado (com uma direção nas conexões) ou não-direcionado (sem uma direção específica). Grafos são úteis para modelar relacionamentos em situações como redes sociais, rotas de viagem ou qualquer problema que envolva entender e analisar conexões entre diferentes entidades. Além disso, há algoritmos específicos para resolver problemas relacionados a grafos, como encontrar o caminho mais curto entre dois pontos ou identificar grupos de conexões fortes entre vértices.</p><br/>
+        <p>Um grafo é uma estrutura de dados que representa relações entre elementos por meio de vértices (ou nós) e arestas (ou arcos) que conectam esses vértices. Essa abstração poderosa permite modelar uma variedade de situações do mundo real, desde redes sociais até mapas de estradas.</p><br/>
+        <h4>Componentes Fundamentais do Grafo:</h4><br/>
+        <p> - Vértices (Nós): Representam entidades ou pontos no grafo.<br/>
+ - Arestas (Arcos): Conexões entre pares de vértices, representando relações ou links.
+</p><br/>
+<h4>Tipos Comuns de Grafos:
+</h4><br/>
+<p>Grafo Direcionado (Orientado): As arestas têm uma direção específica, indicando uma relação de um vértice de origem para um vértice de destino.
+Grafo Não Direcionado: As arestas não têm uma direção específica, representando relações bidirecionais entre vértices.
+</p><br/>
+<h4>Exemplos de Aplicações Práticas:
+</h4> <br/>
+<p> - Redes Sociais: Modelagem de amizades ou conexões entre usuários.<br/>
+ - Sistemas de Navegação: Representação de ruas e interseções em mapas.<br/>
+ - Grafos de Dependência: Visualização de dependências entre tarefas em projetos.
+</p><br/>
+<h4>Operações Específicas para Grafos Direcionados:</h4><br/>
 
-        <p>Em resumo, um grafo é uma representação visual de como coisas estão conectadas usando pontos e linhas, útil para entender relações entre objetos e resolver questões relacionadas à conectividade de maneira eficiente através de algoritmos específicos.</p>
+        <p>Grau de Entrada e Saída: Número de arestas que entram ou saem de um vértice, respectivamente.<br/>
+Ordenação Topológica: Organização de vértices de forma que todas as arestas apontem para a direita.
+</p>
       </div>
 
       <div className='caixaDeTexto'>
@@ -104,9 +122,20 @@ const Grafo = () => {
           ))}
         </svg>
       </div>
+<div className='explicacao'>
+  <h4>Operações e Funcionalidades Principais:</h4><br/>
+  <p> - Gerar Grafo: Gera um Grafo especifico ou aleatorio.<br/>
+     - Inserir ao Grafo: Inclui um novo nó ao grafo.<br/>
+     - Excluir valor: Elimina um no pesente no grafo.<br/>
+     - Buscar valor: Burca um valor dentro do grafo percorendo o caminho ate ele.
+  </p> <br/>
 
+  <p>Ao utilizar essas funcionalidades, os grafos se tornam ferramentas poderosas para modelar e entender conexões complexas. Seja para análise de redes, otimização de rotas ou representação de relacionamentos, os grafos oferecem uma estrutura flexível e abrangente.</p>
+
+</div>
 
             <Grafointer></Grafointer>
+            <div className='indicador'> <span class="arrow-up">&#x2191;</span><p>Acesse o menu a cima para realizar as operações interativas</p></div>
       <Footer />
     </div>
   );

@@ -1,0 +1,33 @@
+.container2 {
+    overflow: hidden;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scrollable2 {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    flex: 1;
+  }
+  
+  .svg-container2 {
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .buttons-container2 {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .button-group2 {
+    margin: 10px;
+  }
+  
+  .input-group2 {
+    margin: 10px;
+  }
+  

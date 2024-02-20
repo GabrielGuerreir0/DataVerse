@@ -1,0 +1,48 @@
+.input-search {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .input-search:focus {
+    outline: none;
+    border-color: #6a5acd;
+  }
+  
+  .button {
+    background-color: #6a5acd;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .button-add {
+    background-color: #6a5acd;
+  }
+  
+  .button-remove {
+    background-color: #6a5acd;
+  }
+  
+  .fila-item {
+    background-color: #6a5acd;
+    color: #fff;
+    padding: 5px; /* Reduzindo o padding */
+    margin: 2px; /* Reduzindo a margem */
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+    font-size: 14px; /* Reduzindo o tamanho da fonte */
+    width: 40px; /* Definindo a largura dos itens */
+    display: flex; /* Tornando o item um contêiner flexível */
+    align-items: center; /* Centralizando verticalmente */
+    justify-content: center; /* Centralizando horizontalmente */
+    flex-direction: row-reverse;
+  }

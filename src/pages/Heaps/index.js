@@ -2,125 +2,176 @@ import React, { useState, useEffect } from 'react';
 import './Heaps.css'; // Estilos CSS
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
+import HeapsInter from './componentes/HeapsInter';
 
 const HeapAnimation = () => {
-  // Estado para os elementos do heap e o próximo elemento a ser inserido
   const [heapElements, setHeapElements] = useState([]);
-  const [nextElement, setNextElement] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [elementCount, setElementCount] = useState(0);
 
   useEffect(() => {
-    // Define um intervalo para adicionar elementos ao heap de forma automática
-    const interval = setInterval(() => {
-      if (heapElements.length < 10) {
-        // Gera um novo elemento único
-        const newElement = generateUniqueElement();
-        setNextElement(newElement); // Define o próximo elemento a ser inserido
+    if (elementCount < 15) {
+      const interval = setInterval(() => {
+        const newValue = Math.floor(Math.random() * 100);
+        insertIntoHeap(newValue);
+        setElementCount(prevCount => prevCount + 1);
+      }, 1000); // Adiciona um novo elemento a cada segundo
+      return () => clearInterval(interval);
+    }
+  }, [elementCount]);
 
-        // Adiciona o próximo elemento automaticamente após um tempo
-        setTimeout(() => {
-          addToHeap(newElement);
-        }, 1000);
+  const insertIntoHeap = (newValue) => {
+    const newHeap = [...heapElements, newValue];
+    bubbleUp(newHeap);
+    setHeapElements(newHeap);
+  };
+
+  const bubbleUp = (heap) => {
+    let index = heap.length - 1;
+    while (index > 0) {
+      const parentIndex = Math.floor((index - 1) / 2);
+      if (heap[parentIndex] < heap[index]) {
+        [heap[parentIndex], heap[index]] = [heap[index], heap[parentIndex]];
+        index = parentIndex;
       } else {
-        clearInterval(interval); // Limpa o intervalo após atingir o limite de elementos
+        break;
       }
-    }, 2000); // Intervalo de 2 segundos
-
-    return () => clearInterval(interval); // Limpa o intervalo quando o componente é desmontado
-  }, [heapElements]);
-
-  // Gera um elemento único que ainda não está no heap
-  const generateUniqueElement = () => {
-    let newElement;
-    do {
-      newElement = Math.floor(Math.random() * 10) + 1;
-    } while (heapElements.includes(newElement));
-
-    return newElement;
+    }
   };
 
-  // Adiciona um elemento ao heap
-  const addToHeap = (element) => {
-    if (element !== null) {
-      const updatedHeap = [...heapElements, element];
-      setHeapElements(updatedHeap.sort((a, b) => b - a)); // Ordena o heap
-      checkOrder(updatedHeap); // Verifica se os elementos estão em ordem
-      setNextElement(null); // Limpa o próximo elemento após a inserção
+  const removeFromHeap = () => {
+    if (heapElements.length === 0) return;
+    const newHeap = [...heapElements];
+    [newHeap[0], newHeap[newHeap.length - 1]] = [
+      newHeap[newHeap.length - 1],
+      newHeap[0]
+    ];
+    newHeap.pop();
+    bubbleDown(newHeap);
+    setHeapElements(newHeap);
+  };
+
+  const bubbleDown = (heap) => {
+    let index = 0;
+    while (true) {
+      const leftChildIndex = 2 * index + 1;
+      const rightChildIndex = 2 * index + 2;
+      let maxIndex = index;
+
+      if (leftChildIndex < heap.length && heap[leftChildIndex] > heap[maxIndex]) {
+        maxIndex = leftChildIndex;
+      }
+      if (rightChildIndex < heap.length && heap[rightChildIndex] > heap[maxIndex]) {
+        maxIndex = rightChildIndex;
+      }
+
+      if (maxIndex !== index) {
+        [heap[maxIndex], heap[index]] = [heap[index], heap[maxIndex]];
+        index = maxIndex;
+      } else {
+        break;
+      }
     }
   };
 
-  // Verifica se os elementos estão em ordem
-  const checkOrder = (elements) => {
-    for (let i = 0; i < elements.length - 1; i++) {
-      if (elements[i] < elements[i + 1]) {
-        console.log('Erro: Elementos fora de ordem.');
-        return;
-      }
-    }
-    console.log('Todos os elementos estão em ordem correta.');
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  // Renderiza a representação visual do heap
-  const renderHeap = () => {
-    let maxIndex = 0;
-    let minIndex = 0;
-
-    for (let i = 0; i < heapElements.length; i++) {
-      if (heapElements[i] > heapElements[maxIndex]) {
-        maxIndex = i;
-      }
-      if (heapElements[i] < heapElements[minIndex]) {
-        minIndex = i;
-      }
+  const renderHeapLines = () => {
+    const lines = [];
+    for (let i = 1; i < heapElements.length; i++) {
+      lines.push(
+        <line
+          key={i}
+          x1={getPositionX(i)}
+          y1={getPositionY(i)}
+          x2={getPositionX(Math.floor((i - 1) / 2))}
+          y2={getPositionY(Math.floor((i - 1) / 2))}
+          style={{ stroke: 'black', strokeWidth: 2 }}
+        />
+      );
     }
-
-    return heapElements.map((element, index) => (
-      <div
-        className={`heap-node ${index === maxIndex ? 'max-value' : ''} ${index === minIndex ? 'min-value' : ''}`}
-        key={index}
-        style={{ height: `${element * 10}px` }}
-      >
-        {element}
-      </div>
-    ));
+    return lines;
   };
 
-  // Renderiza o próximo elemento a ser inserido no heap
-  const renderNextElement = () => {
-    return (
-      <div className="next-element">
-        {nextElement !== null && (
-          <div className="next-element-box">
-            <span className="value">{nextElement}</span>
-          </div>
-        )}
-      </div>
-    );
+  const getPositionX = (index) => {
+    const level = Math.floor(Math.log2(index + 1));
+    const indexInLevel = index + 1 - Math.pow(2, level);
+    const totalLevels = Math.floor(Math.log2(heapElements.length + 1)); // Corrigido aqui
+    const widthRatio = Math.pow(2, totalLevels - level - 1);
+    const positionX = (indexInLevel + 0.5) * (80 * widthRatio);
+    return positionX;
+  };
+
+  const getPositionY = (index) => {
+    const level = Math.floor(Math.log2(index + 1));
+    const positionY = 50 + level * 80;
+    return positionY;
   };
 
   return (
     <div className='page'>
       <Navbar/>
       <div className='titulo_heap' id="inicio"><h2>Heap</h2></div>
-        
-      
-      <div className='explicacao'><p> Um heap é uma estrutura de dados que organiza elementos (como números) em forma de árvore binária, onde cada nó pai possui valores menores (no caso de um heap mínimo) ou maiores (no caso de um heap máximo) que seus nós filhos. Isso significa que o elemento no topo do heap é o maior (no caso de um heap máximo) ou o menor (no caso de um heap mínimo) valor presente. Isso é útil para encontrar rapidamente o valor máximo ou mínimo de um conjunto de dados, bem como para implementar algoritmos de ordenação eficientes, como o heapsort.</p><br/>
-
-<p>Heaps são usados em várias aplicações computacionais, como em algoritmos de busca, filas de prioridade e implementações de algoritmos de ordenação. Sua estrutura permite acesso rápido ao maior ou menor elemento de um conjunto de dados, tornando-se uma ferramenta valiosa em situações onde essas operações são frequentes e necessitam de eficiência em termos de tempo de execução.</p><br/>
-
-</div>
-      
-      
-      <div className='caixaDeTexto'>
-        {/* Container para representação visual do heap */}
-        <div className="heap-container">
-          <div className="heap">
-            {renderHeap()} {/* Renderiza o heap */}
-          </div>
-          {renderNextElement()} {/* Renderiza o próximo elemento */}
-        </div>
+      <div className='explicacao'>
+        <p> Um heap é uma estrutura de dados que organiza elementos de forma hierárquica, priorizando a eficiência nas operações de inserção e remoção de elementos com base em sua prioridade. Heaps são frequentemente utilizados em filas de prioridade e algoritmos de ordenação, como o HeapSort.</p><br/>
+        <h4>Principais Características de um Heap</h4><br/>
+        <p> - Estrutura de Árvore: Um heap é uma árvore binária que segue a propriedade de heap, onde cada nó pai tem uma prioridade igual ou superior à de seus nós filhos.<br/>
+ - Heap Máximo e Mínimo: Em um heap máximo, o nó pai tem uma prioridade maior que a de seus filhos, enquanto em um heap mínimo, o nó pai tem uma prioridade menor que a de seus filhos.
+</p><br/>
+<h4>Exemplos de Aplicações Práticas:</h4><br/>
+<p> - Fila de Prioridade: Utilizado em algoritmos que requerem a execução de tarefas com base em prioridades específicas.<br/>
+ - Implementação de Filas de Espera: Gerencia a ordem de acesso de processos ou tarefas com base em suas prioridades.<br/>
+ - HeapSort: Algoritmo de ordenação que utiliza a estrutura de heap para classificar elementos.
+</p><br/>
+<h4>Operações Específicas para Heaps:</h4><br/>
+<p> - Heapify: Transforma uma árvore em um heap, garantindo que cada subárvore seja um heap válido.<br/>
+ - Redução de Chave: Modifica a prioridade de um elemento no heap, ajustando sua posição.
+</p>
       </div>
+      <div className='caixaDeTexto'>
+        <div id='centro'>
+        <svg className="svg-container2" width="1000%" height="1000%">
+          {renderHeapLines()}
+          {heapElements.map((item, index) => (
+            <Balloon key={index} number={item} x={getPositionX(index)} y={getPositionY(index)} />
+          ))}
+        </svg></div>
+      </div>
+      <div className='explicacao'>
+        <h4>Operações e Funcionalidades Principais:</h4><br/>
+        <p> - Inserir Elemento: Adiciona um novo elemento ao heap<br/>
+         - Remover Elemento: Remove o elemento do heap<br/>
+         - Buscar: Retorna o elemento sem removê-lo do heap.<br/>
+          - Construir Heap: Transforma um conjunto de elementos em um heap, garantindo a propriedade de heap.
+        </p><br/>
+      <p>Ao empregar essas funcionalidades, um heap se torna uma ferramenta eficiente para lidar com prioridades e ordenação de elementos. Seja para otimizar algoritmos de busca ou gerenciar filas de tarefas com diferentes níveis de importância, os heaps oferecem uma abordagem eficaz para organização de dados com base em prioridades.</p>
+      </div>
+      <HeapsInter heapElements={heapElements} removeFromHeap={removeFromHeap} />
+      <div className='indicador'> <span class="arrow-up">&#x2191;</span><p>Acesse o menu a cima para realizar as operações interativas</p></div>
       <Footer/>
     </div>
+  );
+};
+const Balloon = ({ number, x, y, searchIndex, currentIndex }) => {
+  const [fillColor, setFillColor] = useState('#aaf');
+
+  useEffect(() => {
+    if (searchIndex === currentIndex) {
+      setFillColor('#f0f');
+    } else {
+      setFillColor('#aaf');
+    }
+  }, [searchIndex, currentIndex]);
+
+  return (
+    <g>
+      <circle cx={x} cy={y} r="20" stroke="black" strokeWidth="3" fill={fillColor} />
+      <text x={x} y={y + 5} textAnchor="middle" fontSize="16px" fill="black">
+        {number}
+      </text>
+    </g>
   );
 };
 

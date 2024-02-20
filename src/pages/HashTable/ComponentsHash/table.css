@@ -1,16 +1,134 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
 .hash-table {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .hash-table-item {
-    border: 1px solid #ccc;
-    padding: 8px;
-    margin: 4px;
-    transition: background-color 0.5s;
-  }
-  
-  .hash-table-item.searching {
-    background-color: yellow;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bucket {
+  border: 1px solid #000;
+  width: 100px;
+  height: 200px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.bucket .value {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.controls input[type="number"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.controls button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 16px;
+}
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.hash-table {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border-top: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.hash-table {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bucket {
+  background-color: #24053c;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.item {
+  background-color: #600c4b;
+  border: 1px solid #ccc;
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border-top: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.square {
+  border: 1px solid #fff;
+  padding: 5px;
+}
+.bucket {
+  height: auto; /* Definindo a altura para automático */
+}

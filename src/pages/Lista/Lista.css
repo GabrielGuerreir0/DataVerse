@@ -113,3 +113,16 @@ h1 {
     .page_list{
         background: linear-gradient(to bottom, #131223,#300453);
     }
+    p{
+      line-height: 30px;
+    }
+    .indicador{
+      color: white;
+      font-size: 20px;
+      margin-left: 2%;
+      margin-right: 9%;
+      margin-bottom: 50px;
+      line-height: 1;
+      font-family: 'Nova Square', sans-serif;
+    }
+    
